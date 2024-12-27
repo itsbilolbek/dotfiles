@@ -3,6 +3,14 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# ignore emacs files
+*#
+*~
+.#*
+.*.swp
+*.elc
+*.tmp
+
 # C extensions
 *.so
 
