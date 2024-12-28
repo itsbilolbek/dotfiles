@@ -116,7 +116,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# My custom scripts
 
-setxkbmap -option ctrl:nocaps
+# Replace Caps lock with control key
 
+gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:swapcaps']"
