@@ -39,6 +39,9 @@ ln -sf "$DOTFILES_DIR/.bashrc" "$HOME/.bashrc"
 ln -sf "$DOTFILES_DIR/.vimrc" "$HOME/.vimrc"
 ln -sf "$DOTFILES_DIR/.xprofile" "$HOME/.xprofile"
 
+# Setting up directories
+mkdir "$HOME/Projects"
+
 # Installing uzbek keyboard layout
 KBD_PATH="/tmp/uzbek-linux-keyboard"
 git clone https://github.com/itsbilolbek/uzbek-linux-keyboard.git $KBD_PATH
