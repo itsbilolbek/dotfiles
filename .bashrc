@@ -4,3 +4,8 @@ alias la="ls -lAhv --color=auto -F --group-directories-first"
 alias grep="grep --color=auto"
 
 export LC_ALL="en_US.UTF-8"
+
+# Unlimited bash history
+export HISTFILESIZE=
+export HISTSIZE=
+
