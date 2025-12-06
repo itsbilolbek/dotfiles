@@ -1,0 +1,10 @@
+
+[user]
+	name  = Bilolbek Normuminov
+	email = bilolbeknormuminov@gmail.com
+
+[color]
+	ui = auto
+
+[init]
+	defaultBranch = main
