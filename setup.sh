@@ -5,7 +5,7 @@ echo "Installing dependencies..."
 sudo apt update -y && sudo apt upgrade -y
 
 declare -a _packages=(
-	git curl vim
+	git curl vim-gtk3
 	python3 python3-pip
 	neofetch build-essential
 )
