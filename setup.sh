@@ -18,17 +18,26 @@ echo "Setting up dotfiles..."
 
 DOTFILES_DIR="$HOME/.dotfiles"
 
-# Backup existing .bashrc if it exists
+# Backup existing dotfiles if they exist
 if [ -f "$HOME/.bashrc" ]; then
   mv "$HOME/.bashrc" "$HOME/.bashrc.bak"
   echo "Backed up existing .bashrc to .bashrc.bak"
 fi
 
-# Create a symlink
-ln -sf "$DOTFILES_DIR/.bashrc" "$HOME/.bashrc"
+if [ -f "$HOME/.vimrc" ]; then
+  mv "$HOME/.vimrc" "$HOME/.vimrc.bak"
+  echo "Backed up existing .vimrc to .vimrc.bak"
+fi
 
-# Repeat for other files
-ln -sf ~/.dotfiles/.xprofile ~/.xprofile
+if [ -f "$HOME/.xprofile" ]; then
+  mv "$HOME/.xprofile" "$HOME/.xprofile.bak"
+  echo "Backed up existing .bashrc to .xprofile.bak"
+fi
+
+# Create a symlinks
+ln -sf "$DOTFILES_DIR/.bashrc" "$HOME/.bashrc"
+ln -sf "$DOTFILES_DIR/.vimrc" "$HOME/.vimrc"
+ln -sf "$DOTFILES_DIR/.xprofile" "$HOME/.xprofile"
 
 echo "Dotfiles setup complete!"
 
