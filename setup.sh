@@ -14,6 +14,11 @@ for i in "${_packages[@]}"; do
 	sudo apt install -y "$i"
 done
 
+# git installations
+
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install --all
+
 echo "Setting up dotfiles..."
 
 DOTFILES_DIR="$HOME/.dotfiles"
