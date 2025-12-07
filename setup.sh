@@ -8,16 +8,25 @@ declare -a _packages=(
 	git curl vim-gtk3
 	python3 python3-pip
 	neofetch build-essential
+  flatpak
 )
 
 for i in "${_packages[@]}"; do
 	sudo apt install -y "$i"
 done
 
+# flatpak installations
+
+flatpak install flathub org.telegram.desktop
+
 # git installations
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --all
+
+# Direct installations
+
+curl -f https://zed.dev/install.sh | sh
 
 echo "Setting up dotfiles..."
 
