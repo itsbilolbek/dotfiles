@@ -67,6 +67,8 @@ KBD_PATH="/tmp/uzbek-linux-keyboard"
 git clone https://github.com/itsbilolbek/uzbek-linux-keyboard.git $KBD_PATH
 sudo $KBD_PATH/install.sh
 
+# Setting up wallpaper
+gsettings set org.gnome.desktop.background picture-uri "file://$DOTFILES_DIR/.dotfiles/foggy-forest-wallpaper.jpg"
 
 echo "Dotfiles setup complete!"
 
