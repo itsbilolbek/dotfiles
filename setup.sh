@@ -43,11 +43,6 @@ if [ -f "$HOME/.vimrc" ]; then
   echo "Backed up existing .vimrc to .vimrc.bak"
 fi
 
-if [ -f "$HOME/.xprofile" ]; then
-  mv "$HOME/.xprofile" "$HOME/.xprofile.bak"
-  echo "Backed up existing .bashrc to .xprofile.bak"
-fi
-
 if [ -f "$HOME/.gitconfig" ]; then
   mv "$HOME/.gitconfig" "$HOME/.gitconfig.bak"
   echo "Backed up existing .gitconfig to .gitconfig.bak"
@@ -56,7 +51,6 @@ fi
 # Create a symlinks
 ln -sf "$DOTFILES_DIR/.bashrc" "$HOME/.bashrc"
 ln -sf "$DOTFILES_DIR/.vimrc" "$HOME/.vimrc"
-ln -sf "$DOTFILES_DIR/.xprofile" "$HOME/.xprofile"
 ln -sf "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
 
 # Setting up directories
