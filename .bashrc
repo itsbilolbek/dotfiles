@@ -10,9 +10,17 @@ alias path='echo -e ${PATH//:/\\n}'
 alias projects="cd $HOME/Projects"
 alias dotfiles="cd $HOME/.dotfiles"
 
+alias notes="vim $HOME/notes.txt"
+
 export LC_ALL="en_US.UTF-8"
 
 # Unlimited bash history
-export HISTFILESIZE=
-export HISTSIZE=
+export HISTFILESIZE=32768
+export HISTSIZE=32768
+export HISTCONTROL=ignoreboth
 
+export PATH=$PATH:$HOME/.local/bin
+
+. "$HOME/.cargo/env"
+
+eval "$(starship init bash)"
